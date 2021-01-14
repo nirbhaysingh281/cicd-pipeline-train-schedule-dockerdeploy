@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build Docker Image') {
             when {
-                branch 'example-solution'
+                branch 'master'
             }
             steps {
                 script {
@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Push Docker Image') {
             when {
-                branch 'example-solution'
+                branch 'master'
             }
             steps {
                 script {
